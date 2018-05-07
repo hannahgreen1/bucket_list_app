@@ -13,12 +13,12 @@ CREATE TABLE cities
 (
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
-  countries_id references countries(id)
+  countries_id INT8 REFERENCES countries(id)
 );
 
 CREATE TABLE visits
 (
   id SERIAL8 primary key,
-  city_id INT8 references cities(id),
-  country_id INT8 references countries(id)
+  city_id INT8 REFERENCES cities(id),
+  country_id INT8 REFERENCES countries(id)
 );
