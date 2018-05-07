@@ -1,2 +1,2 @@
 class Visit
-end
+end\

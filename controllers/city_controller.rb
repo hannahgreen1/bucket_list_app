@@ -1,0 +1,13 @@
+require( 'sinatra' )
+require( 'sinatra/contrib/all' )
+require_relative( '../models/city.rb' )
+
+get '/city' do
+  @cities = City.all()
+  erb ( :"city/index" )
+end
+
+get '/cities/:id' do
+  @city = City.find(params['id'].to_i)
+  erb(:"city/show")
+end
