@@ -38,4 +38,15 @@ city3 = City.new({
   "country_id" => country3.id
   })
 city3.save()
-binding.pry
+
+visit1 = Visit.new({
+  "country_id" => country1.id,
+  "city_id" => city1.id
+  })
+visit1.save()
+
+visit2 = Visit.new({
+  "country_id" => country2.id,
+  "city_id" => city2.id
+  })
+visit2.save()

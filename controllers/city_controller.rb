@@ -7,7 +7,7 @@ get '/city' do
   erb ( :"city/index" )
 end
 
-get '/cities/:id' do
+get '/city/:id' do
   @city = City.find(params['id'].to_i)
   erb(:"city/show")
 end
