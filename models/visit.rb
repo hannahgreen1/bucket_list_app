@@ -2,12 +2,12 @@ require_relative('../db/sql_runner.rb')
 
 class Visit
 
-  attr_reader :id, :city_id, :country_id, :start_date, :end_date, :review
+  attr_accessor :city_name, :country_name, :id, :start_date, :end_date, :review
 
   def initialize(options)
     @id = options['id'].to_i
-    @city_id = options['city_id'].to_i
-    @country_id = options['country_id'].to_i
+    @city_name = options['city_name']
+    @country_name = options['country_name']
     @start_date = options['start_date'].to_i
     @end_date = options['end_date'].to_i
     @review = options['review']
@@ -15,15 +15,14 @@ class Visit
 
   def save()
     sql = "INSERT INTO visits
-    (city_id,
-    country_id,
-    start_date,
-    end_date,
-    review)
+    (city_name,
+      country_name,
+      start_date,
+      end_date, review)
     VALUES
       ($1, $2, $3, $4, $5)
     RETURNING id"
-      values = [@city_id, @country_id, @start_date, @end_date, @review]
+      values = [@city_name, @country_name, @start_date, @end_date, @review]
       visit_data = SqlRunner.run(sql, values)
       @id = visit_data.first()['id'].to_i
   end
@@ -51,7 +50,8 @@ class Visit
     sql = "SELECT * FROM visits WHERE id = $1"
     values = [id]
     visit = SqlRunner.run( sql, values )
-    result = City.new( visit.first )
+    p visit
+    result = Visit.new( visit.first )
     return result
   end
 end

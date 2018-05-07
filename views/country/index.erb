@@ -1,1 +1,7 @@
-<p>hello countries</p>
+<p>List of Countries</p>
+
+<ul>
+  <%@countries.each do |country| %>
+<li> <%= country.name %></li>
+<%end  %>
+</ul>
