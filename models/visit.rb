@@ -2,22 +2,28 @@ require_relative('../db/sql_runner.rb')
 
 class Visit
 
-  attr_reader :id, :city_id, :country_id
+  attr_reader :id, :city_id, :country_id, :start_date, :end_date, :review
 
   def initialize(options)
     @id = options['id'].to_i
     @city_id = options['city_id'].to_i
     @country_id = options['country_id'].to_i
+    @start_date = options['start_date'].to_i
+    @end_date = options['end_date'].to_i
+    @review = options['review']
   end
 
   def save()
     sql = "INSERT INTO visits
     (city_id,
-      country_id)
+    country_id,
+    start_date,
+    end_date,
+    review)
     VALUES
-      ($1, $2)
+      ($1, $2, $3, $4, $5)
     RETURNING id"
-      values = [@city_id, @country_id]
+      values = [@city_id, @country_id, @start_date, @end_date, @review]
       visit_data = SqlRunner.run(sql, values)
       @id = visit_data.first()['id'].to_i
   end

@@ -41,12 +41,18 @@ city3.save()
 
 visit1 = Visit.new({
   "country_id" => country1.id,
-  "city_id" => city1.id
+  "city_id" => city1.id,
+  "start_date" => "05/08/2018",
+  "end_date" => "25/08/2018",
+  "review" => "I love Edinburgh, it is beautiful, but needs more sunshine!"
   })
 visit1.save()
 
 visit2 = Visit.new({
   "country_id" => country2.id,
-  "city_id" => city2.id
+  "city_id" => city2.id,
+  "start_date" => "05/08/2018",
+  "end_date" => "25/08/2018",
+  "review" => "I love Rome, it is beautiful!"
   })
 visit2.save()
