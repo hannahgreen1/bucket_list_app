@@ -5,5 +5,5 @@ require_relative('controllers/country_controller')
 require_relative('controllers/visit_controller')
 
 get '/' do
-  erb( :index )
+  erb(:index)
 end
