@@ -1,1 +1,8 @@
-<p>hello cities</p>
+<p>List of Places</p>
+
+<% for city in @cities  %>
+  <p><h3>Name: <%= city.name %></h3></p>
+  <p><h3><a href="/city/<%= city.id %>">Show City</a></h3></p>
+
+  <hr />
+<% end  %>

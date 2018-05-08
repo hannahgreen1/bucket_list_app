@@ -1,0 +1,16 @@
+<h1>Places I have been</h1>
+
+<table>
+  <tr>
+    <th>City</th>
+    <th></th>
+    <th>Country</th>
+  </tr>
+
+  <tr>
+    <td><a href="//<%= city.id %>"><%= city.name %></a></td>
+    <td>|</td>
+    <td><%= city.country_id[:name] %></td>
+  </tr>
+  <% end %>
+</table>
