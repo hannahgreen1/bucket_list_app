@@ -71,6 +71,6 @@ class Visit
 
   def method_name
 
-    endsql = "SELECT cities.*, FROM cities INNER JOIN cities ON countries.id = cities.country_id INNER JOIN visits ON cities.id = visits.city_id"
+    sql = "SELECT cities.*, FROM cities INNER JOIN cities ON countries.id = cities.country_id INNER JOIN visits ON cities.id = visits.city_id"
   end
 end
