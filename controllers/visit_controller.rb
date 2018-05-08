@@ -20,5 +20,5 @@ end
 post '/visit/new' do
   @visit = Visit.new(params)
   @visit.save()
-  redirect to ("/visit")
+  redirect to (:"/visit")
 end

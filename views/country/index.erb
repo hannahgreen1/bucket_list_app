@@ -1,7 +1,9 @@
+
 <p>List of Countries</p>
 
-<ul>
-  <%@countries.each do |country| %>
-<li> <%= country.name %></li>
-<%end  %>
-</ul>
+<% for country in @countries  %>
+  <p><h3>Name: <%= country.name %></h3></p>
+  <p><h3><a href="/country/<%= country.id %>">Show Country</a></h3></p>
+
+  <hr />
+<% end  %>

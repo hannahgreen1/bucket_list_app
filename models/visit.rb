@@ -8,8 +8,8 @@ class Visit
     @id = options['id'].to_i
     @city_name = options['city_name']
     @country_name = options['country_name']
-    @start_date = options['start_date'].to_i
-    @end_date = options['end_date'].to_i
+    @start_date = options['start_date']
+    @end_date = options['end_date']
     @review = options['review']
   end
 

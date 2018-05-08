@@ -2,7 +2,7 @@ require_relative('../db/sql_runner.rb')
 
 class City
 
-  attr_accessor :id, :name, :country_id, 
+  attr_accessor :id, :name, :country_id
 
   def initialize(options)
     @id = options['id'].to_i

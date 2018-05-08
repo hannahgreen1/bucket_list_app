@@ -3,6 +3,9 @@ require_relative( "../models/country.rb" )
 require_relative( "../models/visit.rb" )
 require("pry-byebug")
 
+City.delete_all()
+Country.delete_all()
+Visit.delete_all()
 
 country1 = Country.new({
   "name" => "Scotland"
@@ -40,8 +43,8 @@ city3 = City.new({
 city3.save()
 
 visit1 = Visit.new({
-  "city_name" => "Edinburgh"
-  "country_name" => "Scotland"
+  "city_name" => "Edinburgh",
+  "country_name" => "Scotland",
   "start_date" => "05/08/2018",
   "end_date" => "05/01/2018",
   "review" => "I love Edinburgh, it is beautiful, but needs more sunshine!"
@@ -50,7 +53,7 @@ visit1.save()
 
 visit2 = Visit.new({
   "city_name" => "Rome",
-  "country_name" => "Italy"
+  "country_name" => "Italy",
   "start_date" => "01/05/2018",
   "end_date" => "01/06/2018",
   "review" => "I love Rome, it is beautiful!"

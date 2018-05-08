@@ -1,6 +1,5 @@
 body{
   background-color: LightSlateGrey;
-  background-image: url(edinburgh.jpg);
   background-repeat: no-repeat;
 }
 h1 {
@@ -17,7 +16,7 @@ h2 {
 
 p {
     font-size: 1em;
-    padding: 14px 16px;
+    padding: 10px 12px;
 }
 
 nav{
@@ -28,7 +27,7 @@ nav{
 ul {
     list-style-type: none;
     margin: 0;
-    padding: 10;
+    padding: 5;
     overflow: hidden;
     background-color: #333;
 }
@@ -41,7 +40,7 @@ li a {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 12px;
     text-decoration: none;
 }
 
@@ -54,16 +53,4 @@ img{
   opacity: 0.5;
   filter: alpha(opacity=50);
 
-}
-
-
-.jumbotron {
-  display: flex;
-  align-items: center;
-  background-image: url('edinburgh.jpg');
-  background-size: cover;
-  color: #ffffff;
-  height: 600px;
-  text-shadow: 0.25px 0.25px 0.25px #000000;
-    width: 100%;
 }

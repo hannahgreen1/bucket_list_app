@@ -19,8 +19,8 @@ CREATE TABLE cities
 CREATE TABLE visits
 (
   id SERIAL8 primary key,
-  start_date VARCHAR(255,
-  end_date VARCHAR(255,
+  start_date VARCHAR(255),
+  end_date VARCHAR(255),
   review TEXT,
   city_name VARCHAR(255),
   country_name VARCHAR (255)
