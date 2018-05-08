@@ -1,7 +1,9 @@
-<p>List of Countries</p>
+<p>List of Adventures</p>
 
 <ul>
-  <%@countries.each do |country| %>
-<li> <%= country %></li>
-<%end  %>
+  <%@visit.city_name%>
+  <%@visit.country_name%>
+  <%@visit.start_date%>
+  <%@visit.end_date%>
+  <%=@visit.review%>
 </ul>

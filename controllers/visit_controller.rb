@@ -3,7 +3,8 @@ require( 'sinatra/contrib/all' )
 require_relative( '../models/visit.rb' )
 
 get '/visit' do
-  @visit = Visit.all()
+  @visits = Visit.all()
+  @cities = City.all()
   erb ( :"visit/index" )
 end
 

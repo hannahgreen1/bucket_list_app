@@ -59,3 +59,5 @@ visit2 = Visit.new({
   "review" => "I love Rome, it is beautiful!"
   })
 visit2.save()
+ binding.pry
+nil

@@ -64,5 +64,11 @@ class City
     return result
   end
 
+  def get_country_name_by_id
+     sql = "SELECT * FROM countries WHERE id = $1"
+     values = [@country_id]
+     result = SqlRunner.run(sql, values).first['name']
+     return result
+   end
 
  end

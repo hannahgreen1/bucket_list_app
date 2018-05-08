@@ -8,9 +8,8 @@
   </tr>
 
   <tr>
-    <td><a href="//<%= city.id %>"><%= city.name %></a></td>
-    <td>|</td>
-    <td><%= city.country_id[:name] %></td>
+<td><%=@city.name  %></td>
+<td>  <%=  @city.get_country_name_by_id%></td>
+
   </tr>
-  <% end %>
 </table>
