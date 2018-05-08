@@ -1,0 +1,19 @@
+<form method="post" action="/visit/new">
+  <label for="city">City: </label>
+    <input type="text" name="city_name" value="<%=@visit.city_name%>">
+
+  <label for="country">Country: </label>
+    <input type="text" name="country_name" value="<%=@visit.country_name%>">
+
+  <label for="start-date">Start Dates: </label>
+  <input type="date" name="start_date" value="<%=@visit.start_date%>">
+
+  <label for="end-date">End Dates: </label>
+  <input type="date" name="end_date" value="<%=@visit.end_date%>">
+
+  <label for="review">Comments: </label>
+  <input type="text" name="review" value="<%=@visit.review %>">
+
+  <input type="submit" value="Update New Adventure" value="">
+
+</form>

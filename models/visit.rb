@@ -10,7 +10,7 @@ class Visit
     @country_name = options['country_name']
     @start_date = options['start_date']
     @end_date = options['end_date']
-    @review = options['review']
+    @review = options['review'].to_s
   end
 
   def save()
@@ -25,6 +25,19 @@ class Visit
       values = [@city_name, @country_name, @start_date, @end_date, @review]
       visit_data = SqlRunner.run(sql, values)
       @id = visit_data.first()['id'].to_i
+  end
+  def update()
+    sql = "UPDATE visits
+    SET
+    (city_name,
+      country_name,
+      start_date,
+      end_date,
+      review) =
+      ($1, $2, $3, $4, $5)
+      WHERE id = $6"
+    values = [@city_name, @country_name, @start_date, @end_date, @review, @id]
+    SqlRunner.run( sql, values )
   end
 
   def self.delete_all()

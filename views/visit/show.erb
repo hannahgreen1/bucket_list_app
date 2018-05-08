@@ -1,11 +1,21 @@
 <p>Details of Adventure</p>
 
+<form method="post" action="/visit/<%= @visit.id %>/delete">
 <ul>
   <li><%=@visit.city_name%></li>
   <li> <%=@visit.country_name%></li>
   <li><%=@visit.start_date%></li>
   <li><%=@visit.end_date%></li>
 <li><%=@visit.review%></li>
-
 </ul>
-<!-- delete function and edit function -->
+<input type="submit" value="Delete Adventure">
+</form>
+
+
+<form method="get" action="/visit/<%= @visit.id %>/edit">
+<input type="submit"  value="Edit Adventure">
+</form>
+
+<form method="get" action="/city">
+<input type="submit"  value="Adventure done">
+</form>

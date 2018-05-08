@@ -23,3 +23,24 @@ post '/visit/new' do
   @visit.save()
   redirect to (:"/visit")
 end
+
+# EDIT
+get '/visit/:id/edit' do
+  @visit = Visit.find(params[:id])
+  erb(:"/visit/edit")
+end
+
+# UPDATE existing orders
+post '/visit/:id/update' do
+  @visit = Visit.new(params)
+  @visit.update
+  erb(:"/visit/update")
+end
+
+
+# DELETE orders
+post '/visit/:id/delete' do
+  @visit = Visit.find(params[:id])
+  @visit.delete
+  redirect to ("/visit")
+end
