@@ -22,6 +22,7 @@ CREATE TABLE visits
   start_date VARCHAR(255),
   end_date VARCHAR(255),
   review TEXT,
-  city_name VARCHAR(255),
-  country_name VARCHAR (255)
+  city_id INT8 REFERENCES city(id),
+  country_id INT8 REFERENCES countries(id),
+  visited BOOLEAN
 );

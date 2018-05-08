@@ -2,7 +2,7 @@ require_relative('../db/sql_runner.rb')
 
 class Visit
 
-  attr_accessor :city_name, :country_name, :id, :start_date, :end_date, :review
+  attr_accessor :city_name, :country_name, :id, :start_date, :end_date, :review, :visited
 
   def initialize(options)
     @id = options['id'].to_i
@@ -11,6 +11,7 @@ class Visit
     @start_date = options['start_date']
     @end_date = options['end_date']
     @review = options['review'].to_s
+    @visited = options['end_date']
   end
 
   def save()
@@ -18,11 +19,11 @@ class Visit
     (city_name,
       country_name,
       start_date,
-      end_date, review)
+      end_date, review, visited)
     VALUES
-      ($1, $2, $3, $4, $5)
+      ($1, $2, $3, $4, $5, $6)
     RETURNING id"
-      values = [@city_name, @country_name, @start_date, @end_date, @review]
+      values = [@city_name, @country_name, @start_date, @end_date, @review, @visited]
       visit_data = SqlRunner.run(sql, values)
       @id = visit_data.first()['id'].to_i
   end
@@ -33,10 +34,10 @@ class Visit
       country_name,
       start_date,
       end_date,
-      review) =
-      ($1, $2, $3, $4, $5)
-      WHERE id = $6"
-    values = [@city_name, @country_name, @start_date, @end_date, @review, @id]
+      review, visited) =
+      ($1, $2, $3, $4, $5, $6)
+      WHERE id = $7"
+    values = [@city_name, @country_name, @start_date, @end_date, @review, @visited, @id]
     SqlRunner.run( sql, values )
   end
 
@@ -66,5 +67,10 @@ class Visit
     p visit
     result = Visit.new( visit.first )
     return result
+  end
+
+  def method_name
+
+    endsql = "SELECT cities.*, FROM cities INNER JOIN cities ON countries.id = cities.country_id INNER JOIN visits ON cities.id = visits.city_id"
   end
 end
