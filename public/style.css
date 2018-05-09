@@ -9,12 +9,13 @@ h1 {
     font-size: 3em;
     color: white;
     margin: 1em;
+    padding: 1em;
 }
 
 h2 {
     font-size: 2em;
     color: white;
-    margin: 1em;
+    margin: 2em;
 }
 h3{
   font-size: 1.5em;
@@ -43,11 +44,10 @@ nav a {
     display: inline;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    padding: 12px 14px;
     text-decoration: none;
     font-size: 1.5em;
     margin: 1em;
-
 }
 
 /* Change the link color to #111 (black) on hover */
@@ -108,4 +108,9 @@ input[type=submit], input[type=reset] {
   transform: rotate(45deg);
   position: relative;
   left: 30em;
+}
+
+
+footer{
+  
 }
