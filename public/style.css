@@ -19,22 +19,23 @@ p {
     padding: 10px 12px;
 }
 
-nav{
-  font-size: 1.2em;
-}
-#nav {ul 
+li {
+   font-size: 1.2em;
     list-style-type: circle;
     margin: 0;
     padding: 5;
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
   }
 }
 
 li {
     float: left;}
 
-ul{list-style-type: circle;
+nav.ul{list-style-type: circle;
 margin: 0;
 padding: 5;
 overflow: hidden;}
@@ -56,4 +57,25 @@ img{
   opacity: 0.5;
   filter: alpha(opacity=50);
 
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th, td{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+ th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
 }
