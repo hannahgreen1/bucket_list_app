@@ -96,10 +96,13 @@ input[type=submit], input[type=reset] {
  margin: 0.2em 0.4em;
  cursor: pointer;
  font-size: 0.9em;
-} */
+}
 
 
-img {
-  transform: rotate(20deg);
-
+#wrap-main-img {
+  width: 40%;
+  height: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(45deg);
 }
