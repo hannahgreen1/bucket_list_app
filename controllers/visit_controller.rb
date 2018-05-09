@@ -1,7 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/visit.rb' )
-
+require('pry')
 get '/visit' do
   @visits = Visit.all()
   @cities = City.all()

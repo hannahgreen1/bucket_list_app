@@ -46,8 +46,9 @@ visit1 = Visit.new({
   "city_name" => "Edinburgh",
   "country_name" => "Scotland",
   "start_date" => "05/08/2018",
-  "end_date" => "05/01/2018",
-  "review" => "I love Edinburgh, it is beautiful, but needs more sunshine!"
+  "end_date" => "05/09/2018",
+  "review" => "I love Edinburgh, it is beautiful, but needs more sunshine!",
+  "visited" => true
   })
 visit1.save()
 
@@ -56,7 +57,8 @@ visit2 = Visit.new({
   "country_name" => "Italy",
   "start_date" => "01/05/2018",
   "end_date" => "01/06/2018",
-  "review" => "I love Rome, it is beautiful!"
+  "review" => "I love Rome, it is beautiful!",
+  "visited" => true
   })
 visit2.save()
  binding.pry

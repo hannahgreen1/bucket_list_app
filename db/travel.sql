@@ -2,19 +2,18 @@ DROP TABLE visits;
 DROP TABLE cities;
 DROP TABLE countries;
 
-
 CREATE TABLE countries
 (
-  id SERIAL8 primary key,
-  name VARCHAR(255) not null
-);
+ id SERIAL8 primary key,
+ name VARCHAR(255) not null
+ );
 
 CREATE TABLE cities
 (
   id SERIAL8 primary key,
   name VARCHAR(255) not null,
   country_id INT8 REFERENCES countries(id)
-);
+ );
 
 CREATE TABLE visits
 (
@@ -22,7 +21,7 @@ CREATE TABLE visits
   start_date VARCHAR(255),
   end_date VARCHAR(255),
   review TEXT,
-  city_id INT8 REFERENCES city(id),
-  country_id INT8 REFERENCES countries(id),
+  city_name VARCHAR(255),
+  country_name VARCHAR(255),
   visited BOOLEAN
 );

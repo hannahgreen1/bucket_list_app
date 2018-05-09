@@ -11,7 +11,7 @@ class Visit
     @start_date = options['start_date']
     @end_date = options['end_date']
     @review = options['review'].to_s
-    @visited = options['end_date']
+    @visited = to_boolean(options['visited'])
   end
 
   def save()
@@ -69,8 +69,16 @@ class Visit
     return result
   end
 
-  def method_name
+  # def locations()
+  #   sql ="SELECT cities.*, countries.* FROM countries INNER JOIN cities ON countries.id = cities.country_id INNER JOIN visits
+  #   ON cities.id = visits.city_id;"
+  #   values = [@id]
+  #   location_hashes = SqlRunner.run(sql, values)
+  #   locations = location_hashes.map {|location_hash| Visit.new(location_hash)}
+  #   return locations
+  # end
 
-    sql = "SELECT cities.*, FROM cities INNER JOIN cities ON countries.id = cities.country_id INNER JOIN visits ON cities.id = visits.city_id"
+  def to_boolean(s)
+    return s == "true"
   end
 end
