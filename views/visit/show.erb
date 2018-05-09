@@ -1,14 +1,14 @@
 <h1>Details of Adventure</h1>
 
 <form method="post" action="/visit/<%= @visit.id %>/delete">
-<ul>
-  <li><%=@visit.city_name%></li>
-  <li> <%=@visit.country_name%></li>
-  <li><%=@visit.start_date%></li>
-  <li><%=@visit.end_date%></li>
-<li><%=@visit.review%></li>
 
-</ul>
+  <p>City: <%=@visit.city_name%></p>
+  <p>Country: <%=@visit.country_name%></p>
+  <p>Start Date: <%=@visit.start_date%></p>
+  <p>End Date: <%=@visit.end_date%></p>
+  <p>Review: <%=@visit.review%></p>
+
+
 <input type="submit" value="Delete Adventure">
 </form>
 
@@ -19,4 +19,8 @@
 
 <form method="get" action="/city">
 <input type="submit"  value="Adventure done">
+</form>
+
+<form method="get" action="/visit">
+<input type="submit"  value="Back to travels">
 </form>

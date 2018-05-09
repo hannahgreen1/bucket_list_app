@@ -1,6 +1,7 @@
 body{
   background-color: LightSlateGrey;
   background-repeat: no-repeat;
+  margin: 4em;
 }
 h1 {
     font-style: normal;
@@ -10,72 +11,95 @@ h1 {
 }
 
 h2 {
-    font-size: 2em; /* 30px/16=1.875em */
+    font-size: 2em;
     color: white
 }
-
+h3{
+  font-size: 1.5em;
+  color: white
+}
 p {
-    font-size: 1em;
-    padding: 10px 12px;
+    font-size: 1.5em;
+    padding: 6px 6px;
 }
 
-li {
-   font-size: 1.2em;
-    list-style-type: circle;
+nav {
+    list-style-type: none;
     margin: 0;
     padding: 5;
     overflow: hidden;
     background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
 }
 
-li {
-    float: left;}
-
-nav.ul{list-style-type: circle;
-margin: 0;
-padding: 5;
-overflow: hidden;}
-
-li a {
-    display: block;
+nav a {
+    display: inline;
     color: white;
     text-align: center;
-    padding: 10px 12px;
+    padding: 10px 15px;
     text-decoration: none;
+    font-size: 1.5em;
+    margin: 1em;
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+nav a:hover {
     background-color: #111;
 }
-img{
-  border-radius: 8px;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
 
-}
 th, td {
     padding: 15px;
-    text-align: left;
+    text-align: center;
 }
 th, td{
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 80%;
 }
-td, th {
+td, th, tr {
     border: 1px solid #ddd;
     padding: 8px;
 }
 
- th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #4CAF50;
-    color: white;
+th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: white;
+    color: black;
+}
+
+ a {
+ color: Silver;
+ background-color: transparent;
+ text-decoration: none;
+}
+
+a:link{
+ color: Purple;
+ background-color: transparent;
+ text-decoration: none;
+}
+
+a:hover {
+ color: White;
+ background-color: transparent;
+ text-decoration: none;
+}
+
+input[type=submit], input[type=reset] {
+ background-color: Black;
+ color: Silver;
+ border: 0.1em outset #C0C0C0;
+
+ padding: 0.4em 0.5em;
+ text-decoration: none;
+ margin: 0.2em 0.4em;
+ cursor: pointer;
+ font-size: 0.9em;
+} */
+
+
+img {
+  transform: rotate(20deg);
+
 }
